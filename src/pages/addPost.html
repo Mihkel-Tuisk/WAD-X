@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Blog</title>
     <link rel="stylesheet" href="..\css\style.css">
+    <link rel="stylesheet" href="..\css\addPost.css">
 </head>
 
 <body>
@@ -20,9 +21,20 @@
 
     <div class="main">
 
-            <!-- 
-                Add post stuff
-            -->
+        <div class="post-form-wrapper">
+            <div class="post-form-box">
+                <form class="post-form" enctype="multipart/form-data">
+                    <label for="post-body">Post Body</label>
+                    <textarea id="post-body" name="post-body" rows="5" placeholder="Write something here..."required></textarea>
+
+                    
+                    <label for="file" class="file-upload-button">Select Image</label>
+                    <input type="file" id="file" name="file" accept="image/*" hidden>
+
+                    <a href="../index.html" class="submit-button">Create Post</a>
+                </form>
+            </div>
+        </div>
 
     </div>
 
