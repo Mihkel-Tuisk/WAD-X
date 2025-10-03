@@ -12,7 +12,7 @@
 
     <header>
         <div class="header-left">
-            <a href="..\index.html" class="nav-button">Home</a>
+            <a href="..\..\index.html" class="nav-button">Home</a>
         </div>
         <div class="header-right">
             <img src="../assets/avatar-default.svg" alt="Profile Picture">
@@ -27,14 +27,21 @@
                     <label for="post-body">Post Body</label>
                     <textarea id="post-body" name="post-body" rows="5" placeholder="Write something here..."required></textarea>
 
-                    
                     <label for="file" class="file-upload-button">Select Image</label>
                     <input type="file" id="file" name="file" accept="image/*" hidden>
 
-                    <a href="../index.html" class="submit-button">Create Post</a>
+                    <button type="submit" class="submit-button">Create Post</button>
                 </form>
             </div>
         </div>
+        
+        <script>
+            document.querySelector('form').onsubmit = function(e) {
+                if (!this.checkValidity()) return;
+                e.preventDefault();
+                location.href = "../../index.html";
+            };
+        </script>
 
     </div>
 
