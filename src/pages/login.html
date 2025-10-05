@@ -1,47 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Blog</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/login.css">
 
-<head>
-    <meta charset="UTF-8">
-    <title>Blog</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/login.css">
-</head>
+        <script>
+            document.getElementById('loginForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                window.location.href = '../../index.html';
+            });
+        </script>
+    </head>
 
-<body>
+    <body>
+        <header>
+            <div class="header-left">
+                <a href="../../index.html" class="nav-button">Home</a>
+                <a href="addPost.html" class="nav-button">Add Post</a>
+            </div>
+            <div class="header-right">
+                <a href="login.html">
+                    <img src="../assets/avatar-default.svg" alt="Profile Picture">
+                </a>
+            </div>
+        </header>
 
-    <header>
-        <div class="header-left">
-            <a href="../../index.html" class="nav-button">Home</a>
-            <a href="addPost.html" class="nav-button">Add Post</a>
-        </div>
-        <div class="header-right">
-            <img src="../assets/avatar-default.svg" alt="Profile Picture">
-        </div>
-    </header>
-
-    <main class="main">
-        <section class="login-area">
-            <h1>Welcome to PostIt</h1>
-            <a href="#" class="create-account-link">Create an Account</a>
-            <div class="or-divider">or</div>
-            <h2>Please log in</h2>
-            <form class="login-form" id="loginForm">
-                <input type="email" name="email" placeholder="Email" required class="input-box">
-                <input type="password" name="password" placeholder="Password" required class="input-box">
-                <button type="submit" class="login-btn">Log in</button>
-            </form>
-            <a href="#" class="forgot-password-link">Forgot password?</a>
-        </section>
-    </main>
-
-</body>
-
+        <main class="main">
+            <section class="login-area">
+                <h1>Welcome to PostIt</h1>
+                <a href="#" class="create-account-link">Create an Account</a>
+                <div class="or-divider">or</div>
+                <h2>Please log in</h2>
+                <form class="login-form" id="loginForm">
+                    <input type="email" name="email" placeholder="Email" required class="input-box">
+                    <input type="password" name="password" placeholder="Password" required class="input-box">
+                    <button type="submit" class="login-btn">Log in</button>
+                </form>
+                <a href="#" class="forgot-password-link">Forgot password?</a>
+            </section>
+        </main>
+    </body>
 </html>
-
-<script>
-    document.getElementById('loginForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        window.location.href = '../../index.html';
-    });
-</script>

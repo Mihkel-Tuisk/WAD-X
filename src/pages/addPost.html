@@ -1,42 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Blog</title>
+        <link rel="stylesheet" href="..\css\style.css">
+        <link rel="stylesheet" href="..\css\addPost.css">
 
-<head>
-    <meta charset="UTF-8">
-    <title>Blog</title>
-    <link rel="stylesheet" href="..\css\style.css">
-    <link rel="stylesheet" href="..\css\addPost.css">
-</head>
-
-<body>
-
-    <header>
-        <div class="header-left">
-            <a href="..\..\index.html" class="nav-button">Home</a>
-        </div>
-        <div class="header-right">
-            <a href="login.html">
-                <img src="../assets/avatar-default.svg" alt="Profile Picture">
-            </a>
-        </div>
-    </header>
-
-    <div class="main">
-
-        <div class="post-form-wrapper">
-            <div class="post-form-box">
-                <form class="post-form" enctype="multipart/form-data">
-                    <label for="post-body">Post Body</label>
-                    <textarea id="post-body" name="post-body" rows="5" placeholder="Write something here..."required></textarea>
-
-                    <label for="file" class="file-upload-button">Select Image</label>
-                    <input type="file" id="file" name="file" accept="image/*" hidden>
-
-                    <button type="submit" class="submit-button">Create Post</button>
-                </form>
-            </div>
-        </div>
-        
         <script>
             document.querySelector('form').onsubmit = function(e) {
                 if (!this.checkValidity()) return;
@@ -44,9 +13,35 @@
                 location.href = "../../index.html";
             };
         </script>
+    </head>
 
-    </div>
+    <body>
+        <header>
+            <div class="header-left">
+                <a href="..\..\index.html" class="nav-button">Home</a>
+                <a href="addPost.html" class="nav-button">Add Post</a>
+            </div>
+            <div class="header-right">
+                <a href="login.html">
+                    <img src="../assets/avatar-default.svg" alt="Profile Picture">
+                </a>
+            </div>
+        </header>
 
-</body>
+        <div class="main">
+            <div class="post-form-wrapper">
+                <div class="post-form-box">
+                    <form class="post-form" enctype="multipart/form-data">
+                        <label for="post-body">Post Body</label>
+                        <textarea id="post-body" name="post-body" rows="5" placeholder="Write something here..."required></textarea>
 
+                        <label for="file" class="file-upload-button">Select Image</label>
+                        <input type="file" id="file" name="file" accept="image/*" hidden>
+
+                        <button type="submit" class="submit-button">Create Post</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
