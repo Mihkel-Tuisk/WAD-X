@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Blog</title>
-    <link rel="stylesheet" href="src\css\style.css">
+    <link rel="stylesheet" href="src/css/style.css">
 </head>
 
 <body>
@@ -15,7 +15,20 @@
             <a href="src/pages/addPost.html" class="nav-button">Add Post</a>
         </div>
         <div class="header-right">
-            <img src="src/assets/avatar-default.svg" alt="Profile Picture">
+            <div class="profile-dropdown">
+                <img src="src/assets/avatar-default.svg" alt="Profile Picture" class="profile-image" id="profileToggle">
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <div class="dropdown-item">
+                        <strong>John Doe</strong>
+                    </div>
+                    <div class="dropdown-item">
+                        john.doe@ut.ee
+                    </div>
+                    <div class="dropdown-item dropdown-logout">
+                        <a href="src/pages/login.html">Logout</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -70,6 +83,8 @@
         </div>
 
     </div>
+
+    <script src="src/javascript/dropdown.js"></script>
 
 </body>
 

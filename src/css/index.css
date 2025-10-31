@@ -1,0 +1,44 @@
+#special-post {
+  border: 2px dashed #444;
+  background-color: #eef;
+}
+
+.nav-button:hover {
+  background-color: #777;
+}
+
+.post:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.post p::first-letter {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.post-header span {
+  font-style: italic;
+}
+
+.post > p {
+  color: #333;
+}
+
+.post-image + p {
+  font-weight: bold;
+  color: #222;
+}
+
+.post-header ~ p {
+  border-left: 3px solid #ccc;
+  padding-left: 10px;
+}
+
+footer {
+  background-color: #a0a0a0;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 12px;
+}
