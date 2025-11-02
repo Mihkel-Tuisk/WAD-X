@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
     async function loadData() {
-        //let data = await fetchPostsFromWeb("https://jsonkeeper.com/b/GI31V");
-        let data = window.LOCAL_POSTS;
+        //let data = await fetchPosts("https://jsonkeeper.com/b/GI31V");
+        let data = await fetchPosts("src/json/posts.json")
         
         renderPosts(data);
     }
 
-    async function fetchPostsFromWeb(uri) {
+    async function fetchPosts(uri) {
         const response = await fetch(uri);
         if (!response.ok) {
             throw new Error(`Failed to fetch from ${uri}`);
