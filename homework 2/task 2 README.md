@@ -1,0 +1,1 @@
+We used https://jsonlint.com/ to validate the src\json\posts.json
