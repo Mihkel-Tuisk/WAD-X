@@ -1,4 +1,4 @@
-{
+window.LOCAL_POSTS = {
   "posts": [
     {
       "id": 1,
@@ -101,4 +101,4 @@
       "likes": 0
     }
   ]
-}
+};

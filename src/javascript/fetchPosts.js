@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-    async function loadData() { 
-        let data = await fetchPostsFromWeb("https://jsonkeeper.com/b/GI31V");
+    async function loadData() {
+        //let data = await fetchPostsFromWeb("https://jsonkeeper.com/b/GI31V");
+        let data = window.LOCAL_POSTS;
+        
         renderPosts(data);
     }
 
@@ -14,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function renderPosts(data) {
         const postsContainer = document.querySelector('.main');
-        
         postsContainer.innerHTML = '';
 
         if (data && data.posts) {

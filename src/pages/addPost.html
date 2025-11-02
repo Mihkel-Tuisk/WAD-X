@@ -15,9 +15,20 @@
             <a href="addPost.html" class="nav-button">Add Post</a>
         </div>
         <div class="header-right">
-            <a href="login.html">
-                <img src="../assets/avatar-default.svg" alt="Profile Picture">
-            </a>
+            <div class="profile-dropdown">
+                <img src="../assets/avatar-default.svg" alt="Profile Picture" class="profile-image" id="profileToggle">
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <div class="dropdown-item">
+                        <strong>John Doe</strong>
+                    </div>
+                    <div class="dropdown-item">
+                        john.doe@ut.ee
+                    </div>
+                    <div class="dropdown-item dropdown-logout">
+                        <a href="../pages/login.html">Logout</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -36,6 +47,13 @@
             </div>
         </div>
     </div>
+
+    <footer>
+        <p>&copy; 2024 UT Blog</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Contact</a></p>
+    </footer>
+
+    <script src="../javascript/dropdown.js"></script>
 </body>
 
 <script>
